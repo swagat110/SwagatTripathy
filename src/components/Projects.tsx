@@ -4,6 +4,7 @@ import { ExternalLink, Github, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPinnedRepos, type PinnedProject } from "@/lib/github";
+import builtPinnedProjects from "@/data/pinned-projects.json";
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME ?? "swagat110";
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
@@ -18,16 +19,22 @@ const FALLBACK_PROJECTS: PinnedProject[] = [
   },
 ];
 
+const builtProjects = Array.isArray(builtPinnedProjects) ? (builtPinnedProjects as PinnedProject[]) : [];
+
 const Projects = () => {
-  const { data: projects = [], isLoading, isError } = useQuery({
-    queryKey: ["github-pinned-repos", GITHUB_USERNAME],
+  const { data: liveProjects = [], isLoading, isError } = useQuery({
+    queryKey: ["pinned-projects", GITHUB_USERNAME],
     queryFn: () => fetchPinnedRepos(GITHUB_USERNAME, GITHUB_TOKEN),
     enabled: Boolean(GITHUB_TOKEN?.trim()),
-    staleTime: 1000 * 60 * 10, // 10 minutes
+    staleTime: 1000 * 60 * 10,
   });
 
   const displayProjects =
-    projects.length > 0 ? projects : FALLBACK_PROJECTS;
+    GITHUB_TOKEN?.trim() && liveProjects.length > 0
+      ? liveProjects
+      : builtProjects.length > 0
+        ? builtProjects
+        : FALLBACK_PROJECTS;
 
   return (
     <section id="projects" className="py-20 md:py-32 relative overflow-hidden">
@@ -89,8 +96,7 @@ const Projects = () => {
 
           {isError && (
             <p className="text-center text-muted-foreground text-sm mb-4">
-              Showing saved projects. Add VITE_GITHUB_TOKEN to load pinned repos
-              from GitHub.
+              Showing saved projects.
             </p>
           )}
 

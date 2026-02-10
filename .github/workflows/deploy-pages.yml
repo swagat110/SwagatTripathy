@@ -39,7 +39,7 @@ jobs:
 
       - name: Verify pinned projects
         run: |
-          COUNT=$(node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('public/pinned-projects.json','utf8')); console.log(j.length)")
+          COUNT=$(node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('src/data/pinned-projects.json','utf8')); console.log(j.length)")
           echo "Pinned projects count: $COUNT"
           if [ "$COUNT" = "0" ]; then
             echo "::warning::No pinned projects fetched. Add repo secret PINNED_REPOS_TOKEN (Settings → Security → Secrets and variables → Actions) with a GitHub PAT."

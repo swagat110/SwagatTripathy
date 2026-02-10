@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Build-time script: fetch pinned repos from GitHub and write to public/pinned-projects.json.
- * Used in CI so the deployed site has pinned projects without exposing a token in the client.
- * Requires env: GITHUB_TOKEN (or PINNED_REPOS_TOKEN), GITHUB_USERNAME (default swagat110).
+ * Build-time script: fetch pinned repos from GitHub and write to src/data/pinned-projects.json.
+ * Used in CI so the deployed site has pinned projects in the bundle (no runtime fetch).
+ * Requires env: PINNED_REPOS_TOKEN or GITHUB_TOKEN, GITHUB_USERNAME (default swagat110).
  */
 
 import { writeFileSync, mkdirSync } from "fs";
@@ -10,7 +10,7 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUT_DIR = join(__dirname, "..", "public");
+const OUT_DIR = join(__dirname, "..", "src", "data");
 const OUT_FILE = join(OUT_DIR, "pinned-projects.json");
 
 const GITHUB_GRAPHQL = "https://api.github.com/graphql";
@@ -119,7 +119,7 @@ async function main() {
 
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(OUT_FILE, JSON.stringify(projects, null, 2));
-  console.log(`Wrote ${projects.length} pinned projects to public/pinned-projects.json`);
+  console.log(`Wrote ${projects.length} pinned projects to src/data/pinned-projects.json`);
 }
 
 main().catch((err) => {
