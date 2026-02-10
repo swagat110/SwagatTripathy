@@ -74,8 +74,14 @@ async function fetchReadmeSummary(owner, repo, token) {
 }
 
 async function main() {
-  const token = process.env.PINNED_REPOS_TOKEN || process.env.GITHUB_TOKEN;
-  const username = process.env.GITHUB_USERNAME || "swagat110";
+  const token =
+    process.env.PINNED_REPOS_TOKEN ||
+    process.env.GITHUB_TOKEN ||
+    process.env.VITE_GITHUB_TOKEN;
+  const username =
+    process.env.GITHUB_USERNAME ||
+    process.env.VITE_GITHUB_USERNAME ||
+    "swagat110";
 
   if (!token?.trim()) {
     console.warn("No PINNED_REPOS_TOKEN or GITHUB_TOKEN in env; writing empty pinned projects.");

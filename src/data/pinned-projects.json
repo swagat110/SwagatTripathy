@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "title": "MoonRAG",
+    "description": "A Python RAG (Retrieval Augmented Generation) application that uploads documents to AWS S3, creates an AWS Bedrock Knowledge Base with OpenSearch Serverless as the vector database, and provides a CLI chatbot interface. - Upload files from local directory to S3 - Create OpenSearch Serverless collection for vector…",
+    "tech": [
+      "Python"
+    ],
+    "github": "https://github.com/swagat110/MoonRAG"
+  },
+  {
+    "title": "PDFProcessor",
+    "description": "Dockerized full-stack app: React (Vite) frontend, FastAPI backend, Redis (with Streams) datastore, and a worker for async PDF processing. - PDF upload & parsing: Choose PyPDF (text extraction per page), Google Gemini 2.0 Flash (extract and convert to Markdown), or Mistral OCR (per-page Markdown via Mistral; summary…",
+    "tech": [
+      "Python"
+    ],
+    "github": "https://github.com/swagat110/PDFProcessor"
+  }
+]
