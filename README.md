@@ -72,6 +72,8 @@ This repo includes a workflow that builds and deploys the app to GitHub Pages on
 4. Push a commit to `main` (or run the “Deploy to GitHub Pages” workflow from the **Actions** tab).
 5. After the workflow runs, the site will be at `https://<username>.github.io/<repo-name>/`.
 
+To run the deploy manually: **Actions** tab → click **Deploy to GitHub Pages** in the left sidebar → **Run workflow** (button on the right) → **Run workflow**.
+
 **Option 2: Lovable**
 
 Open [Lovable](https://lovable.dev/projects/40188227-7daa-4aed-a038-40d93649fc72) and click Share → Publish.
