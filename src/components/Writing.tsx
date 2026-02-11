@@ -5,6 +5,13 @@ import { ExternalLink, FileText } from "lucide-react";
 const Writing = () => {
   const articles = [
     {
+      title: "Building MoonRAG: An End-to-End RAG Pipeline with AWS Bedrock and OpenSearch Serverless",
+      description: "Walkthrough of building a full RAG pipeline—document upload to S3, AWS Bedrock Knowledge Base with OpenSearch Serverless as the vector store, and a CLI chatbot interface.",
+      date: "Published on Medium",
+      link: "https://medium.com/@swagattripathy/building-moonrag-an-end-to-end-rag-pipeline-with-aws-bedrock-and-opensearch-serverless-992dcd00560a",
+      tags: ["RAG", "AWS", "Bedrock", "OpenSearch", "Python"],
+    },
+    {
       title: "Installing Citrix Workspace App on Raspberry Pi 4",
       description: "A comprehensive guide on setting up Citrix Workspace App on Raspberry Pi 4, covering installation steps, troubleshooting, and optimization tips for running enterprise software on ARM-based systems.",
       date: "Published on Medium",
