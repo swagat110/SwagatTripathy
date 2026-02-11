@@ -19,7 +19,7 @@ const Contact = () => {
           <Card className="p-8 md:p-12 bg-gradient-to-br from-card to-muted/20">
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <a
-                href="mailto:swagattripathy@example.com"
+                href="mailto:swagat.tripathy@gmail.com"
                 className="flex items-center justify-center gap-3 p-4 bg-background rounded-lg hover:shadow-medium transition-smooth hover:-translate-y-1"
               >
                 <Mail className="text-accent" size={24} />
@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
 
             <Button size="lg" className="shadow-glow" asChild>
-              <a href="mailto:swagattripathy@example.com">
+              <a href="mailto:swagat.tripathy@gmail.com">
                 Send Message
               </a>
             </Button>
