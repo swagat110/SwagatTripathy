@@ -4,28 +4,28 @@ import { Card } from "@/components/ui/card";
 const Skills = () => {
   const skillCategories = [
     {
+      title: "Generative AI",
+      skills: ["RAG", "LLM APIs", "LangChain", "MCP Servers", "AWS Bedrock", "SageMaker"],
+    },
+    {
       title: "Languages",
-      skills: ["Java", "Python", "TypeScript", "CSS", "HTML"],
+      skills: ["Java", "Python", "TypeScript", "Spring", "Shell", "Linux"],
     },
     {
-      title: "Cloud & Infrastructure",
-      skills: ["AWS", "EC2", "S3", "Lambda", "CloudFormation", "AWS CDK", "Lambda"],
+      title: "Infrastructure & DevOps",
+      skills: ["AWS CDK", "CloudFormation", "CI/CD Automation", "Docker", "Git"],
     },
     {
-      title: "Tools & Platforms",
-      skills: ["Git", "Docker", "Linux", "Maven", "Tomcat", "Cursor"],
+      title: "AWS Services",
+      skills: ["Lambda", "S3", "EC2", "VPC", "RDS", "CloudWatch", "AWS Config", "Security Hub", "SSM", "Athena", "Glacier"],
     },
     {
-      title: "AI & Machine Learning",
-      skills: ["RAG", "AI Agents", "LangChain", "NLP", "LLMs"],
+      title: "Observability",
+      skills: ["CloudWatch Custom Metrics", "Dashboards", "Alarms", "RTLA"],
     },
     {
-      title: "System Design",
-      skills: ["Distributed Systems", "Microservices", "API Design", "DevOps"],
-    },
-    {
-      title: "Hardware",
-      skills: ["Raspberry Pi", "IoT", "Embedded Systems"],
+      title: "Soft Skills",
+      skills: ["Problem Solving", "Analytical Thinking", "Automation Mindset", "Cross-Functional Collaboration", "Incident Management", "Process Optimization"],
     },
   ];
 

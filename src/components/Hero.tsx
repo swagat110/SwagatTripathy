@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 animate-fade-in">
             <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Software Engineer
+              Generative AI–focused Software Engineer
             </span>
           </div>
 
@@ -27,8 +27,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
-            Building scalable systems and solving complex problems at Amazon. 
-            Passionate about cloud infrastructure, automation, and innovative solutions.
+            Building production-grade AI systems and scalable AWS infrastructure at Amazon.
+            Passionate about automation and eliminating operational toil.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up delay-300">

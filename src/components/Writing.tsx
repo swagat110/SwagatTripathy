@@ -12,6 +12,13 @@ const Writing = () => {
       tags: ["RAG", "AWS", "Bedrock", "OpenSearch", "Python"],
     },
     {
+      title: "Building a Full-Stack PDF Processor with React, FastAPI, Redis Streams, and AI — From Zero to Docker Compose",
+      description: "End-to-end walkthrough of building a full-stack PDF processing application with a React frontend, FastAPI backend, Redis Streams for async processing, and AI-powered text extraction — all orchestrated with Docker Compose.",
+      date: "Published on Medium",
+      link: "https://medium.com/@swagattripathy/building-a-full-stack-pdf-processor-with-react-fastapi-redis-streams-and-ai-from-zero-to-b33e058243e9",
+      tags: ["React", "FastAPI", "Redis", "AI", "Docker"],
+    },
+    {
       title: "Installing Citrix Workspace App on Raspberry Pi 4",
       description: "A comprehensive guide on setting up Citrix Workspace App on Raspberry Pi 4, covering installation steps, troubleshooting, and optimization tips for running enterprise software on ARM-based systems.",
       date: "Published on Medium",

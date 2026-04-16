@@ -53,12 +53,11 @@ const Certifications = () => {
       credentialId: "64SG4WD21MEQ1D3V",
     },
     {
-      title: "Certified Scrum Master",
-      issuer: "Scrum Alliance",
+      title: "Confluent Apache Kafka Fundamentals",
+      issuer: "Confluent",
       date: "2024",
       level: "Professional Certificate",
       verified: true,
-      credentialId: "704001",
     },
     {
       title: "Design Patterns Thinking",
