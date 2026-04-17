@@ -32,7 +32,8 @@ jobs:
 
       - name: Fetch pinned projects (for Featured Projects section)
         id: fetch-pinned
-        run: node scripts/fetch-pinned-projects.mjs
+        continue-on-error: true
+        run: node -r dotenv/config scripts/fetch-pinned-projects.mjs
         env:
           PINNED_REPOS_TOKEN: ${{ secrets.PINNED_REPOS_TOKEN }}
           GITHUB_USERNAME: swagat110

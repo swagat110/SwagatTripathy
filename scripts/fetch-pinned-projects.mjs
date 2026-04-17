@@ -5,7 +5,7 @@
  * Requires env: PINNED_REPOS_TOKEN or GITHUB_TOKEN, GITHUB_USERNAME (default swagat110).
  */
 
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
@@ -129,6 +129,12 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err);
-  process.exit(1);
+  console.warn("Failed to fetch pinned projects:", err.message);
+  console.warn("Build will continue with existing pinned-projects.json (if any).");
+  mkdirSync(OUT_DIR, { recursive: true });
+  try {
+    readFileSync(OUT_FILE);
+  } catch {
+    writeFileSync(OUT_FILE, "[]");
+  }
 });
